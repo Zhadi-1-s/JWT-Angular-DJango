@@ -54,7 +54,7 @@ class LoginView(APIView):
 class UserView(APIView):
 
     def get(self,request):
-        token = request.COOKIES.get('jwt')
+        token = request.headers.get('Authorization', '').split(' ')[1]
 
         if not token:
             raise AuthenticationFailed('Unauthenticated')
@@ -71,7 +71,7 @@ class UserView(APIView):
     
 class LogoutView(APIView):
     
-    def post(self, request):
+    def post(self,request):
         response = Response()
         response.delete_cookie('jwt')
         response.data = {

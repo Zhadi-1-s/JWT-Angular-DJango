@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'authentication'
+    'authentication',
+    'corsheaders'
 ]
 
 AUTH_USER_MODEL = 'authentication.User'
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'linkshare_project.urls'
@@ -79,12 +82,12 @@ WSGI_APPLICATION = 'linkshare_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'railway',
-        'USER':'postgres',
-        'PASSWORD':'Df-E6e4A1d*5G5cgfe4Fg3b3DFe-gdf*',
-        'HOST':'monorail.proxy.rlwy.net',
-        'PORT':'10634'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'authentication',
+        'USER':'root',
+        'PASSWORD':'20044002',
+        'HOST':'localhost',
+        'PORT':'3306'
     }
 }
 
@@ -118,6 +121,29 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+ALLOWED_HOSTS = [
+    "http://locallhost:4200",
+    "127.0.0.1"
+]
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
 
 
 # Static files (CSS, JavaScript, Images)
