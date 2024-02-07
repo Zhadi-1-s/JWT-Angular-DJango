@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="login">
+        <div class="inputs">
+            <label for="">Login</label>
+            <input type="text" placeholder="Напишите свой email" #email>
+            <label for="">Password</label>
+            <input type="text" placeholder="Пароль" #password>
+        </div>
+        <div class="buttons">
+            <button (click)="login(email.value, password.value)">Войти</button>
+            <button (click)="navigateToRegister()">Создать аккаунт</button>
+        </div>
+    </div>
+</div>
