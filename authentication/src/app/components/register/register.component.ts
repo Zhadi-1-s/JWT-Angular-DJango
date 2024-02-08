@@ -10,12 +10,14 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class RegisterComponent {
 
-  user!:User
+  user:User = {
+    name: '',
+    email:'',
+    password:''
+  }
 
   constructor(private apiService:ApiService, private router: Router){
-    this.user.name = '',
-    this.user.email = '',
-    this.user.password = ''
+   
   }
 
   register_user(name:string,email:string,password:string){

@@ -21,7 +21,7 @@ export class ApiService {
   
   }
 
-  login_user(user:any):Observable<any>{
+  login_user(user:User):Observable<any>{
     
     return this.http.post<any>(this.apiUrl_login, user)
 

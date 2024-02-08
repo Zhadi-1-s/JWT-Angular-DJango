@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserComponent } from './components/user/user.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { RegisterComponent } from './components/register/register.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

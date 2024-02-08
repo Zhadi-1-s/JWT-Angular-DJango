@@ -1,15 +1,16 @@
 <div class="container">
     <div class="login">
         <div class="inputs">
-            <label for="" #name>Name</label>
-            <input type="text" placeholder="Напишите ваше имя">
+            <label for="" >Name</label>
+            <input type="text" placeholder="Напишите ваше имя" #name>
             <label for="">Login</label>
             <input type="text" placeholder="Напишите свой email" #email>
             <label for="">Password</label>
             <input type="text" placeholder="Пароль" #password>
         </div>
         <div class="buttons">
-            <button>Создать аккаунт</button>
+            <button (click)="register_user(name.value,email.value,password.value)">Создать</button>
+            <button>Есть аккаунт</button>
         </div>
     </div>
 </div>
