@@ -1,3 +1,17 @@
-<h1>{{user.email}}</h1>
-
-<button (click)="logout()">Logout</button>
+<div class="container">
+    <div class="profile">
+        <h1>{{user.username}}</h1>
+        <div id="avatar">
+            <img src="{{user.photoUrl}}" alt="">
+        </div>
+        <div id="details">
+            <span>Here will be some manipulations with profile</span>
+        </div>
+        <div id="buttons">
+            <button>В магазин</button>
+        </div>
+        <div id="logout">
+            <button (click)="logout()">logout</button>
+        </div>
+    </div>
+</div>

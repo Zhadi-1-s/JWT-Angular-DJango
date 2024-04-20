@@ -12,8 +12,9 @@ export class ApiService {
   private apiUrl_login = 'http://127.0.0.1:8000/api/login'
   private apiUrl_User = 'http://127.0.0.1:8000/api/user'
   private apiUrl_Logout = 'http://127.0.0.1:8000/api/logout'
+
+
   constructor( private http: HttpClient) { }
-  res!:string
 
   register_user(user:User):Observable<User>{
     

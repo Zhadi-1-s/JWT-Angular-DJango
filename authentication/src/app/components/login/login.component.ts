@@ -11,7 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class LoginComponent {
 
   constructor(private apiService: ApiService,private navigator:Router){
-    this.user = {name:'',email:'',password:''}
+    this.user = {name:'',email:'',password:'',username:'',photoUrl:''}
   }
 
   user!:User

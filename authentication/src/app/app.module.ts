@@ -9,6 +9,9 @@ import { UserComponent } from './components/user/user.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ApiService } from './services/api.service';
+import { ProductsComponent } from './components/products/products.component';
+import { CarsComponent } from './components/cars/cars.component';
+import { MotorcyclesComponent } from './components/motorcycles/motorcycles.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ApiService } from './services/api.service';
     LoginComponent,
     UserComponent,
     LogoutComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductsComponent,
+    CarsComponent,
+    MotorcyclesComponent
   ],
   imports: [
     BrowserModule,

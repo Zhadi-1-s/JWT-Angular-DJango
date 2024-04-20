@@ -6,10 +6,13 @@
             <label for="">Login</label>
             <input type="text" placeholder="Напишите свой email" #email>
             <label for="">Password</label>
-            <input type="text" placeholder="Пароль" #password>
+            <input type="password" placeholder="Пароль" #password>
+            <label for="">UserName</label>
+            <input type="text" placeholder="Ваше имя пользавателя" #userName>
+            <input type="file" #image accept="image/*" (change)="processFile(image)">
         </div>
         <div class="buttons">
-            <button (click)="register_user(name.value,email.value,password.value)">Создать</button>
+            <button (click)="register_user(name.value,email.value,password.value,userName.value)">Создать</button>
             <button>Есть аккаунт</button>
         </div>
     </div>
